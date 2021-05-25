@@ -53,7 +53,8 @@ jobs:
           name: deploy_dist
       - name: Change version
         working-directory: deploy_dist/gorilla-ui
-        run: npm version patch
+        # run: npm version patch
+        run: ls deploy_dist
       - name: Deploy to NPM
         uses: JS-DevTools/npm-publish@v1
         with:
