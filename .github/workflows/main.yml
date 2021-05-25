@@ -27,7 +27,7 @@ jobs:
         run: npm version patch
       - name: Archive build
         if: success()
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: deploy_dist
           path: dist/gorilla-ui
@@ -48,10 +48,10 @@ jobs:
         with:
           node-version: '14.x'
       - name: Download build
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v2
         with:
           name: deploy_dist
-          path: deploy_dist/gorilla-ui
+          path: ./gorilla-ui
       - name: Display structure of downloaded files
         run: ls -R
       - name: Deploy to NPM
