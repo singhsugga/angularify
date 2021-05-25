@@ -59,7 +59,7 @@ jobs:
         uses: JS-DevTools/npm-publish@v1
         with:
           working-directory: gorilla-ui
-          package: gorilla-ui/package.json
+          package: ./gorilla-ui/package.json
           check-version: false
           access: public
           token: ${{ secrets.NPM_TOKEN }}
