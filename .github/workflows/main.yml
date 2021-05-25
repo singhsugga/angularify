@@ -50,5 +50,6 @@ jobs:
       - name: Deploy to NPM
         uses: JS-DevTools/npm-publish@v1
         with:
+          access: public
           token: ${{ secrets.NPM_TOKEN }}
          
