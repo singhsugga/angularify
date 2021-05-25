@@ -13,7 +13,7 @@ jobs:
         node-version: '14.x'
     - run: npm install
     - run: npm install -g @angular/cli@latest
-    - run: ng build gorilla-ui"
+    - run: ng build gorilla-ui
     - name: Publish generated content to GitHub Pages
       uses: tsunematsu21/actions-publish-gh-pages@v1.0.1
       with:
