@@ -14,9 +14,10 @@ jobs:
     - run: npm install
     - run: npm install -g @angular/cli@latest
     - run: ng build gorilla-ui
+    - working-directory: ./dist/gorilla-ui
+    - run: npm version patch
+    - run: npm pack
     - name: Publish generated content to GitHub Pages
-      uses: tsunematsu21/actions-publish-gh-pages@v1.0.1
+      uses: JS-DevTools/npm-publish@v1
       with:
-          dir: dist
-          branch: gh-pages
-          token: ${{ secrets.ACCESS_TOKEN }}
+        token: ${{ secrets.NPM_TOKEN }}
