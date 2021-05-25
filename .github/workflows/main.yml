@@ -58,6 +58,7 @@ jobs:
       - name: Deploy to NPM
         uses: JS-DevTools/npm-publish@v1
         with:
+          working-directory: gorilla-ui
           check-version: false
           access: public
           token: ${{ secrets.NPM_TOKEN }}
