@@ -7,6 +7,20 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitReturns": true,
+    "paths": {
+      // "gorilla-ui": [
+      //   "dist/gorilla-ui/gorilla-ui",
+      //   "dist/gorilla-ui"
+      // ],
+      "@gui/gorilla-ui/*": [
+        "projects/gorilla-ui/*",
+        "projects/gorilla-ui"
+      ],
+      "@gui/gorilla-ui": [
+        "dist/gorilla-ui/*",
+        "dist/gorilla-ui"
+      ]
+    },
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
