@@ -17,7 +17,4 @@ jobs:
     - working-directory: ./dist/gorilla-ui
     - run: npm version patch
     - run: npm pack
-    - name: Publish generated content to GitHub Pages
-    - uses: JS-DevTools/npm-publish@v1
-      with:
-        token: ${{ secrets.NPM_TOKEN }}
+   
