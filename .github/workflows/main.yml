@@ -22,7 +22,7 @@ jobs:
         run: npm run build:lib
       # - name: Test
       #   run: npm run test:ci
-      -name: version
+      - name: version
         working-directory: ./dist/gorilla-ui
         run: npm version patch
       - name: Archive build
