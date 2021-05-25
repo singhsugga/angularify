@@ -51,9 +51,10 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: deploy_dist
-      - name: Deploy to NPM
+      - name: Change version
         working-directory: deploy_dist/gorilla-ui
         run: npm version patch
+      - name: Deploy to NPM
         uses: JS-DevTools/npm-publish@v1
         with:
           check-version: false
