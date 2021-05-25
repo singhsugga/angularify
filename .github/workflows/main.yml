@@ -13,8 +13,8 @@ jobs:
         node-version: '14.x'
     - run: npm install
     - run: npm install -g @angular/cli@latest
-    - run: ng build gorilla-ui  --configuration production
+    - run: npm run build:lib
       working-directory: ./dist/gorilla-ui
     - run: npm version patch
     - run: npm pack
-   
+
