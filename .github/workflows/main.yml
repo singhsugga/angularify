@@ -43,13 +43,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+      - name: Use Node 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
       - name: Download build
         uses: actions/download-artifact@v1
         with:
           name: deploy_dist
       - name: Deploy to NPM
+        working-directory: deploy_dist/gorilla-ui
+        run: npm version patch
         uses: JS-DevTools/npm-publish@v1
         with:
+          check-version: false
           access: public
           token: ${{ secrets.NPM_TOKEN }}
 
