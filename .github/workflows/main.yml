@@ -50,8 +50,7 @@ jobs:
       - name: Change Version
         run: npm version patch
       - name: Deploy to NPM
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JS-DevTools/npm-publish@v1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: deploy_dist/angular-demo
+          token: ${{ secrets.NPM_TOKEN }}
+         
