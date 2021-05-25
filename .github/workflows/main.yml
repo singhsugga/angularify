@@ -14,7 +14,7 @@ jobs:
     - run: npm install
     - run: npm install -g @angular/cli@latest
     - run: ng build gorilla-ui
-    - working-directory: ./dist/gorilla-ui
+      working-directory: ./dist/gorilla-ui
     - run: npm version patch
     - run: npm pack
    
