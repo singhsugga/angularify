@@ -1,0 +1,117 @@
+label {
+	&.vx-checkbox-item {
+		display    : flex;
+		align-items: center;
+		cursor     : pointer;
+		margin     : 0;
+		padding    : 0;
+		max-width  : 100%;
+
+		span {
+			display        : inline-flex;
+			align-items    : center;
+			justify-content: center;
+
+			&.checkbox {
+				height       : 16px;
+				width        : 16px;
+				border-radius: 2px;
+				border       : 1px solid #DBDBDB;
+				position     : relative;
+				padding      : 2px;
+				margin-top   : 0px;
+			}
+
+			&.value {
+				color      : #4E4E4E;
+				font-size  : 14px;
+				line-height: 16px;
+				font-weight: 400;
+				margin-left: 10px;
+				max-width  : calc(100% - 26px);
+
+				&:empty {
+					display: none;
+				}
+			}
+		}
+
+		svg {
+			display   : none;
+			margin-top: 0px;
+		}
+
+		input[type=checkbox] {
+			display: none;
+
+			&:checked~svg {
+				display: block;
+			}
+
+			&:checked+.checkbox {
+				display: none;
+			}
+
+			&:disabled~* {
+				opacity: .7;
+			}
+		}
+	}
+}
+
+.disabled {
+	opacity: .4 !important;
+}
+
+.checkmark {
+	width            : 16px;
+	height           : 16px;
+	border-radius    : 2px;
+	stroke-width     : 4;
+	stroke           : #fff;
+	stroke-miterlimit: 10;
+	box-shadow       : inset 0px 0px 0px #34AA44;
+	animation        : fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+}
+
+.checkmark__circle {
+	stroke-dasharray : 166;
+	stroke-dashoffset: 166;
+	stroke-width     : 2;
+	stroke-miterlimit: 10;
+	stroke           : #34AA44;
+	fill             : none;
+	animation        : stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+	padding-right    : 10px;
+}
+
+.checkmark__check {
+	transform-origin : 50% 50%;
+	stroke-dasharray : 48;
+	stroke-dashoffset: 48;
+	animation        : stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes scale {
+
+	0%,
+	100% {
+		transform: none;
+	}
+
+	50% {
+		transform: scale3d(1.1, 1.1, 1);
+	}
+}
+
+@keyframes fill {
+	100% {
+		box-shadow: inset 0px 0px 0px 30px #34AA44;
+	}
+}
