@@ -6,4 +6,4 @@
 // export * from './lib/gorilla-ui.component';
 // export * from './lib/gorilla-ui.module';
 export * from './lib/components/checkbox'
-
+export * from './lib/components/dialog'
