@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CheckboxComponent } from './checkbox/checkbox.component';
+import { ToolTipDirective } from './tooltip.directive';
 
 
 
 @NgModule({
   declarations: [
-    CheckboxComponent
+    ToolTipDirective
   ],
   imports: [
     CommonModule
-  ],
-  exports:[CheckboxComponent]
+  ],exports:[ToolTipDirective]
 })
-export class GuiCheckboxModule { }
+export class GuiToolTipModule { }
